@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site">
+	<name>JE-Parallax Condent Slider</name> 
+	<author>jExtensions.com</author> 
+	<creationDate>2012 September</creationDate> 
+	<copyright>jExtensions.com</copyright> 
+	<license>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</license> 
+	<authorEmail>support@jExtensions.com</authorEmail> 
+	<authorUrl>http://jExtensions.com</authorUrl> 
+	<version>2.5.0</version> 
+	<description>
+	<![CDATA[
+	<h1>JE Parallax - Condent Slider</h1>
+	<div style="margin:0 0 0 10px; font-size:15px;">Download more free extensions at <a href="http://jextensions.com" target="_blank">jExtensions.com</a>;
+	<br/> Get support for this Joomla 2.5 module on the official <a href="http://jextensions.com/parallax-content-slider-joomla-2.5/" target="_blank">Parallax Content Slider</a> page.</div><br/>
+	<div style="margin:0 0 0 10px; font-size:11px;">Credits: <a href="http://tympanus.net/codrops/2012/03/15/parallax-content-slider-with-css3-and-jquery/" target="_blank" >Parallax</a></div>
+	<br/>
+		]]>
+	</description>
+	
+	<files>
+		<filename module="mod_je_parallax">mod_je_parallax.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+		<fieldset name="basic">
+			<field name="jQuery" type="list" default="1" label="jQuery" description="Enable or disable jQuery plugin on this module.">
+				<option value="1">jQuery 1.7.1 (Load localy)</option>
+				<option value="2">jQuery Latest Version</option>
+				<option value="3">Disable jQuery Plugin</option>
+			</field>
+
+			<field name="Style" type="list" default="1" label="Color Styles" description="Choose color and pattern style.">
+				<option value="1">Style 1</option>
+				<option value="2">Style 2</option>
+				<option value="3">Style 3</option>
+				<option value="4">Style 4</option>
+				<option value="5">Style 5</option>
+				<option value="6">Style 6</option>
+				<option value="7">Style 7</option>
+				<option value="8">Style 8</option>
+				<option value="9">Style 9</option>
+				<option value="10">Style 10</option>
+			</field>
+			
+			<field name="imgWidth" type="text" default="940" label="Slideshow Width" description="Width of slideshow image in pixels." />
+			<field name="imgHeight" type="text" default="400" label="Slideshow Height" description="Height of slideshow image in pixels." />		
+			
+			<field type="spacer" name="&lt;div style=&quot;color:#444; background:#D5EEFF; border:1px solid #a4cde9; font-size:15px; font-weight:bold; padding:3px; margin:0;&quot;&gt;Parallax Setup&lt;/div&gt;" />
+			<field name="BgPosition" type="text" default="100" label="Background Position" description="Increment the bg position (parallax effect) when sliding." />	
+			<field name="Autoplay" type="list" default="true" label="Autoplay" description="Slideshow autoplay on / off.">
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</field>		
+			<field name="Interval" type="text" default="4000" label="Slide Interval" description="Time between transitions." />
+		</fieldset>
+			
+		<fieldset name="slide_1" label="Slide 1">
+			<field name="Image1" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title1" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text1" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link1" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />
+		</fieldset>
+		
+		<fieldset name="slide_2" label="Slide 2">
+			<field name="Image2" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title2" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text2" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link2" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />					
+		</fieldset>
+		
+		<fieldset name="slide_3" label="Slide 3">
+			<field name="Image3" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title3" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text3" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link3" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />					
+		</fieldset>
+		
+		<fieldset name="slide_4" label="Slide 4">
+			<field name="Image4" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title4" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text4" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link4" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />					
+		</fieldset>
+		
+		<fieldset name="slide_5" label="Slide 5">
+			<field name="Image5" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title5" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text5" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link5" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />							
+		</fieldset>
+		
+		<fieldset name="slide_6" label="Slide 6">
+			<field name="Image6" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title6" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text6" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link6" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>	
+		
+		<fieldset name="slide_7" label="Slide 7">
+			<field name="Image7" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title7" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text7" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link7" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />							
+		</fieldset>			
+		
+		<fieldset name="slide_8" label="Slide 8">
+			<field name="Image8" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title8" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text8" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link8" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>
+		
+		<fieldset name="slide_9" label="Slide 9">
+			<field name="Image9" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title9" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text9" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link9" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>
+		
+		<fieldset name="slide_10" label="Slide 10">
+			<field name="Image10" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title10" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text10" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link10" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />					
+		</fieldset>	
+		
+		<fieldset name="slide_11" label="Slide 11">
+			<field name="Image11" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title11" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text11" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link11" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>
+		
+		<fieldset name="slide_12" label="Slide 12">
+			<field name="Image12" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title12" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text12" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link12" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />							
+		</fieldset>	
+		
+		<fieldset name="slide_13" label="Slide 13">
+			<field name="Image13" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title13" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text13" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link13" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>	
+		
+		<fieldset name="slide_14" label="Slide 14">
+			<field name="Image14" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title14" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text14" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link14" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>	
+		
+		<fieldset name="slide_15" label="Slide 15">
+			<field name="Image15" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title15" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text15" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link15" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>	
+		
+		<fieldset name="slide_16" label="Slide 16">
+			<field name="Image16" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title16" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text16" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link16" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />							
+		</fieldset>	
+		
+		<fieldset name="slide_17" label="Slide 17">
+			<field name="Image17" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title17" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text17" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link17" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>
+		
+		<fieldset name="slide_18" label="Slide 18">
+			<field name="Image18" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title18" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text18" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link18" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>	
+		
+		<fieldset name="slide_19" label="Slide 19">
+			<field name="Image19" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title19" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text19" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link19" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>
+
+		<fieldset name="slide_20" label="Slide 20">
+			<field name="Image20" type="media" label="Image Path" description="Select an image." />		
+			<field name="Title20" type="text" default="" label="Slide Title" description="Title goes here." />
+			<field name="Text20" type="textarea" filter="safehtml" cols="60" rows="5" default="" label="Slide Text" description="Text goes here. HTML allowed." />			
+			<field name="Link20" type="text" default="" label="Read More Link" description="Insert URL of the read more button." />						
+		</fieldset>						
+	</fields>
+	</config>
+</extension>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE install PUBLIC "-//Joomla! 3/0//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.0/template-install.dtd">
+
+<extension version="3.3.1."
+type="template"
+ client="site">
+
+ <name>template</name>
+
+ <version>1.0</version>
+
+ <creationDate>09/07/2014</creationDate>
+
+ <author> Artem Morozov </author>
+<authorEmail> </authorEmail>
+<authorUrl>Likbez-net.ru</authorUrl>
+
+<copyright> GNU/GPL</copyright>
+
+<description>simple_template_for_studing</description>
+
+<files>
+<folder>css</folder>
+<folder>images</folder>
+<filename>index.php</filename>
+<folder>html</folder>
+</files>
+
+<positions>
+<position>search</position>
+<position>newsline</position>
+<position>header</position>
+<position>menu</position>
+<position>left</position>
+<position>right</position>
+<position>footer</position>
+</positions>
+
+</extension>

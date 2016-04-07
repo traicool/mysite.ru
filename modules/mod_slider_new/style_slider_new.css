@@ -1,0 +1,13 @@
+@charset "utf-8";
+.slider_new_header { float:left; width:480px; height: 240px; margin: 0}
+.slider_new_header .obert_sl_new { float:left; width:inherit; height:inherit; margin: 0; }
+.slider_new_header .left_sl_new { position: absolute; margin: 100px 0 0 5px; text-align:left; font-size:36px; cursor:pointer; z-index:2; color:#000; background-color:#fff; padding:10px; border-radius: 4px; opacity:0.8; }
+.slider_new_header .left_sl_new:hover { color:#FFF; background-color:#000; }
+.slider_new_header .mid_sl_new { position: absolute; width:inherit; height:inherit; margin: 0 0 0 0; padding:0 0 0 0 ; z-index:1; overflow:hidden; }
+.slider_new_header .right_sl_new { position: absolute; margin: 100px 0 0 430px; text-align:right; font-size:36px; cursor:pointer; z-index:2; color:#000; background-color:#fff; padding:10px; border-radius: 4px; opacity:0.8; }
+.slider_new_header .right_sl_new:hover {  color:#FFF; background-color:#000;  }
+.slider_new_header .scroll_sl_new { position: absolute; width:3000px; height:inherit; margin: 0 0 0 0; }
+
+.slider_new_header .scroll_sl_new .img_sl_new { float:left; width:480px; height:240px; }
+.slider_new_header .scroll_sl_new .img_sl_new div { position: absolute; width:480px; height:240px; }
+.slider_new_header .scroll_sl_new .img_sl_new div.text_sl_new { background:url(fon_sl_new.png); padding:10px; height:20px; width:480px; color:#ffffff; font-weight:bold; }

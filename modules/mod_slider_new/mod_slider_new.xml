@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+
+	<name>Новый слайдер</name>
+	<author>Joomla Module</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>Copyright (C) Aziss-kOMON</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>aziss-komon@mail.ru</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	
+	<files>
+		<filename module="mod_slider_new">mod_slider_new.php</filename>
+		<filename>mod_slider_new.xml</filename>
+		<filename>script_slider_new.js</filename>
+		<filename>style_slider_new.css</filename>
+		<filename>fon_sl_new.png</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+		<fields name="params">
+		
+			<fieldset name="basic">
+				<field name="img_1" type="media"  default="" label="Картинка 1" description="" size="20" />
+				<field name="link_1" type="text"  default="" label="Ссылка 1" description="" size="60" />
+				<field name="text_1" type="text"  default="" label="Текст 1" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_2" type="media"  default="" label="Картинка 2" description="" size="20" />
+				<field name="link_2" type="text"  default="" label="Ссылка 2" description="" size="60" />
+				<field name="text_2" type="text"  default="" label="Текст 2" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_3" type="media"  default="" label="Картинка 3" description="" size="20" />
+				<field name="link_3" type="text"  default="" label="Ссылка 3" description="" size="60" />
+				<field name="text_3" type="text"  default="" label="Текст 3" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_4" type="media"  default="" label="Картинка 4" description="" size="20" />
+				<field name="link_4" type="text"  default="" label="Ссылка 4" description="" size="60" />
+				<field name="text_4" type="text"  default="" label="Текст 4" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_5" type="media"  default="" label="Картинка 5" description="" size="20" />
+				<field name="link_5" type="text"  default="" label="Ссылка 5" description="" size="60" />
+				<field name="text_5" type="text"  default="" label="Текст 5" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_6" type="media"  default="" label="Картинка 6" description="" size="20" />
+				<field name="link_6" type="text"  default="" label="Ссылка 6" description="" size="60" />
+				<field name="text_6" type="text"  default="" label="Текст 6" description="" size="60" />
+				<field type="spacer" br="true" />
+				
+				<field name="img_7" type="media"  default="" label="Картинка 7" description="" size="20" />
+				<field name="link_7" type="text"  default="" label="Ссылка 7" description="" size="60" />
+				<field name="text_7" type="text"  default="" label="Текст 7" description="" size="60" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Дополнительный класс модуля" description="" />
+			</fieldset>
+			
+		</fields>
+	</config>	
+</extension>

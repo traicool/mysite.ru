@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" method="upgrade" client="site">
+	<name>Sj Scroller for JoomShopping</name>
+	<creationDate>July 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2013 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.0.0</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_js_scroller">mod_sj_js_scroller.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_js_scroller/core/fields">
+			<fieldset name="basic">
+                 <field  
+                    name="catids" 
+                    type="categories" 
+                    size="10" 
+                    default=""                    
+                    label="Categories" 
+                    description="Categories" multiple="true"
+                    />
+					<field name="product_order_by" type="list" default="prod.name" label="Product Order By" description="Sort product by one of these.">
+                    <option value="name">Product Title</option>
+                    <option value="prod.product_price">Product Price</option>
+                    <option value="prod.reviews_count">Product Reviews</option>
+                    <option value="prod.hits">Product Hits</option>
+                    <option value="prod.product_id">Product ID</option>
+                    <option value="prod.product_date_added">Created Date</option>
+                    <option value="prod.date_modify">Modified Date</option>
+					<option value="prod.average_rating">Average Rating</option>
+                </field>
+                <field name="product_order_dir" type="list" default="group.topten" label="Product Order Dir" description="product order dir">
+                     <option value="asc">ASC</option>
+                    <option value="desc">DESC</option>
+                </field>  
+					<field
+                    name="count_products"
+                    type="text"
+                    default = "5"
+                    label="Limitation" description="Maximum number of products to display. Enter 0 for unlimited selection. 20 is maximum. 6 is maximum for  Navigation Style 3" />
+            </fieldset>	 
+			<fieldset name="ITEM_OPTIONS_LABEL" label="ITEM_OPTIONS_LABEL">
+                <field name="item_link_target" type="list" default="_blank" label="Link Target" description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup window</option>
+				</field>
+				<field type="sjheading" label="Title Options" />
+				<field name="item_title_display" type="radio" class="btn-group" default="1" label="DISPLAY_TITLE_LABEL" description="DISPLAY_TITLE_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="item_title_max_characs" type="text" default="20" label="TITLE_MAXLENGTH_LABEL" description="TITLE_MAXLENGTH_DESC" />
+				<field name="item_title_data_y" type="text"  default="50" label="Position Top" description="Position Top" />
+				<field name="item_title_data_x" type="text"  default="50" label="Position Left" description="Position Left" />
+                <field name="item_title_transition" type="list"  default="wipeleft" label="Transition" description="Transition for title of item">
+                    <option value="wipedown">Wipe Down</option>
+                    <option value="wipeup">Wipe Up</option>
+					<option value="wiperight">Wipe Right</option>
+                    <option value="wipeleft">Wipe Left</option>
+					<option value="fade">Fade</option>
+                    <option value="expanddown">Expand Down</option>
+					<option value="expandup">Expand Up</option>
+					<option value="expandright">Expand Right</option>
+					<option value="expandleft">Expand Left</option>
+                </field> 
+				 
+				<field type="sjheading" label="Description Options" />
+				<field name="item_desc_display" type="radio" class="btn-group" default="1" label="DISPLAY_DESCRIPTION_LABEL" description="DISPLAY_DESCRIPTION_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="item_desc_max_characs" type="text" default="50" label="DESCRIPTION_MAXLENGTH_LABEL" description="DESCRIPTION_MAXLENGTH_DESC" />
+				<field name="item_desc_data_y" type="text"  default="100" label="Position Top" description="Position Top" />
+				<field name="item_desc_data_x" type="text"  default="50" label="Position Left" description="Position Left" />
+                <field name="item_desc_transition" type="list"  default="wiperight" label="Transition" description="Transition for description of item">
+                    <option value="wipedown">Wipe Down</option>
+                    <option value="wipeup">Wipe Up</option>
+					<option value="wiperight">Wipe Right</option>
+                    <option value="wipeleft">Wipe Left</option>
+					<option value="fade">Fade</option>
+                    <option value="expanddown">Expand Down</option>
+					<option value="expandup">Expand Up</option>
+					<option value="expandright">Expand Right</option>
+					<option value="expandleft">Expand Left</option>
+                </field>
+				<field type="sjheading" label="Price Options" />
+				<field name="item_price_display" type="radio" class="btn-group" default="1" label="Display Price" description="Allow to show/hide price of item">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+				<field name="item_price_data_y" type="text"  default="150" label="Position Top" description="Position Top" />
+				<field name="item_price_data_x" type="text"  default="50" label="Position Left" description="Position Left" />
+                <field name="item_price_transition" type="list"  default="wiperight" label="Transition" description="Transition for description of item">
+                    <option value="wipedown">Wipe Down</option>
+                    <option value="wipeup">Wipe Up</option>
+					<option value="wiperight">Wipe Right</option>
+                    <option value="wipeleft">Wipe Left</option>
+					<option value="fade">Fade</option>
+                    <option value="expanddown">Expand Down</option>
+					<option value="expandup">Expand Up</option>
+					<option value="expandright">Expand Right</option>
+					<option value="expandleft">Expand Left</option>
+                </field>	
+				<field type="sjheading" label="Review Options" />
+				<field name="item_review_display" type="radio" class="btn-group" default="1" label="Display Review" description="Allow to show/hide review of item">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+				<field name="item_review_data_y" type="text"  default="200" label="Position Top" description="Position Top" />
+				<field name="item_review_data_x" type="text"  default="50" label="Position Left" description="Position Left" />
+                <field name="item_review_transition" type="list"  default="wiperight" label="Transition" description="Transition for description of item">
+                    <option value="wipedown">Wipe Down</option>
+                    <option value="wipeup">Wipe Up</option>
+					<option value="wiperight">Wipe Right</option>
+                    <option value="wipeleft">Wipe Left</option>
+					<option value="fade">Fade</option>
+                    <option value="expanddown">Expand Down</option>
+					<option value="expandup">Expand Up</option>
+					<option value="expandright">Expand Right</option>
+					<option value="expandleft">Expand Left</option>
+                </field>	
+				<field type="sjheading" label="Readmore Options" />
+				<field name="item_readmore_display" type="radio" default="1" class="btn-group" label="DISPLAY_READMORE_LABEL" description="DISPLAY_READMORE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_text" type="text" default="Read more" label="READMORE_TEXT_LABEL" description="READMORE_TEXT_DESC" />
+				<field name="item_readmore_data_y" type="text"  default="250" label="Position Top" description="Position Top" />
+				<field name="item_readmore_data_x" type="text"  default="50" label="Position Left" description="Position Left" />
+                <field name="item_readmore_transition" type="list"  default="expanddown" label="Transition" description="Transition for readmore link">
+                    <option value="wipedown">Wipe Down</option>
+                    <option value="wipeup">Wipe Up</option>
+					<option value="wiperight">Wipe Right</option>
+                    <option value="wipeleft">Wipe Left</option>
+					<option value="fade">Fade</option>
+                    <option value="expanddown">Expand Down</option>
+					<option value="expandup">Expand Up</option>
+					<option value="expandright">Expand Right</option>
+					<option value="expandleft">Expand Left</option>
+                </field> 
+			</fieldset>
+			<fieldset name="IMAGE_OPTIONS_LABEL" label="IMAGE_OPTIONS_LABEL">
+				<field  type="sjheading" label="Get Images From  Image Product" />
+				<field name="imgcfg_from_image_product" label="Image Product" class="btn-group" description="Get Images From Image Product" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+				<field type="sjheading" label="Get Images From Description" />	
+			    <field name="imgcfg_from_description" label="Description" class="btn-group" description="Get Images From Description" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+				<field type="sjheading" label="Get images From Extend Folder" />	
+			    <field name="imgcfg_from_external" label="EXTEND_FOLDER_LABEL" class="btn-group" description="EXTEND_FOLDER_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_external_url" type="text" default="images/joomshopping/{product_id}.jpg" label="EXTEND_FOLDER_LABEL" description="EXTEND_FOLDER_DESC"/>
+			    <field name="imgcfg_order" type="text" default="image_product, description, external" label="ORDER_GET_LABEL" description="ORDER_GET_DESC" />
+			    <field name="imgcfg_placeholder" label="DEFAULT_IMAGE_LABEL" class="btn-group" description="DEFAULT_IMAGE_DESC" type="radio" default="1">
+	                 <option value="1">Yes</option>
+	                 <option value="0">No</option>
+                </field>
+                <field name="imgcfg_placeholder_path" type="text" default="modules/mod_sj_js_scroller/assets/img/nophoto.jpg" label="PLACE_HOLDER_PATH_LABEL" description="PLACE_HOLDER_PATH_DESC"/>
+				<field type="sjheading" label="Big Image Options" />
+				<field name="imgcfg_function" default="resize_stretch" type="list" label="RESIZE_MODE_LABEL" description="RESIZE_MODE_DESC">
+				     <option value="none">None</option>
+				     <option value="resize_center">Center</option>
+				     <option value="resize_fill">Fill</option>
+				     <option value="resize_fit">Fit</option>
+				     <option value="resize_stretch">Stretch</option>
+			    </field>
+			    <field name="imgcfg_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+				     <option value="">Default</option>
+				     <option value="1">GIF</option>
+				     <option value="2">JPEG</option>
+				     <option value="3">PNG</option>
+			    </field>
+			    <field name="imgcfg_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group" description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_width" type="text" default="960" label="IMAGE_WIDTH_LABEL" description="IMAGE_WIDTH_DESC" />
+			    <field name="imgcfg_height" type="text" default="400" label="IMAGE_HEIGHT_LABEL" description="IMAGE_HEIGHT_DESC" />
+			    <field name="imgcfg_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL" description="BACKGROUND_DESC" />
+				<field type="sjheading" label="Small Image Options" />
+				<field name="imgcfgnav_function" type="list"
+			    	label="Resize Mode" description="Resize Mode">
+			    	<option value="none">None</option>
+			    	<option value="resize_center">Center</option>
+			    	<option value="resize_fill">Fill</option>
+			    	<option value="resize_fit">Fit</option>
+			    	<option value="resize_stretch">Stretch</option>
+			    </field>
+			    <field name="imgcfgnav_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+				     <option value="">Default</option>
+				     <option value="1">GIF</option>
+				     <option value="2">JPEG</option>
+				     <option value="3">PNG</option>
+			    </field>
+			    <field name="imgcfgnav_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group" description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfgnav_width" type="text" default="83" label="IMAGE_WIDTH_LABEL" description="IMAGE_WIDTH_DESC" />
+			    <field name="imgcfgnav_height" type="text" default="80" label="IMAGE_HEIGHT_LABEL" description="IMAGE_HEIGHT_DESC" ></field>
+			    <field name="imgcfgnav_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL" description="BACKGROUND_DESC" ></field>				
+			</fieldset> 
+			<fieldset name="EFFECT_OPTIONS_LABEL" label="EFFECT_OPTIONS_LABEL">
+				<field name="fx" type="list" default="random" label="Effect" description="Effect">
+					<option value="random">Random</option>
+					<option value="left-curtain">Left-Curtain</option>
+					<option value="right-curtain">Right-Curtain</option>
+					<option value="top-curtain">Top-Curtain</option>
+					<option value="bottom-curtain">Bottom-Curtain</option>
+					<option value="strip-down-right">Strip-Down-Right</option>
+					<option value="strip-down-left">Strip-Down-Left</option>
+					<option value="strip-up-right">Strip-Up-Right</option>
+					<option value="strip-up-left">Strip-Up-Left</option>
+					<option value="strip-up-down">Strip-Up-Down</option>
+					<option value="strip-up-down-left">Strip-Up-Down-Left</option>
+					<option value="strip-left-right">Strip-Left-Right</option>
+					<option value="strip-left-right-down">Strip-Left-Right-Down</option>
+					<option value="slide-in-right">Slide-In-Right</option>
+					<option value="slide-in-left">Slide-In-Left</option>
+					<option value="slide-in-up">Slide-In-Up</option>
+					<option value="slide-in-down">Slide-In-Down</option>
+					<option value="fade">Fade</option>
+					<option value="block-random">Block-Random</option>
+					<option value="block-fade">Block-Fade</option>
+					<option value="block-fade-reverse">Block-Fade-Reverse</option>
+					<option value="block-expand">Block-Expand</option>
+					<option value="block-expand-reverse">Block-Expand-Reverse</option>
+					<option value="block-expand-random">Block-Expand-Random</option>
+					<option value="zigzag-top">Zigzag-Top</option>
+					<option value="zigzag-bottom">Zigzag-Bottom</option>
+					<option value="zigzag-grow-top">Zigzag-Grow-Top</option>
+					<option value="zigzag-grow-bottom">Zigzag-Grow-Bottom</option>
+					<option value="zigzag-drop-top">Zigzag-Drop-Top</option>
+					<option value="zigzag-drop-bottom">Zigzag-Drop-Bottom</option>
+					<option value="strip-left-fade">Strip-Left-Fade</option>
+					<option value="strip-right-fade">Strip-Right-Fade</option>
+					<option value="strip-top-fade">Strip-Top-Fade</option>
+					<option value="strip-bottom-fade">Strip-Bottom-Fade</option>
+					<option value="block-drop-random">Block-Drop-Random</option>
+				</field>
+				<field name="play" class="btn-group" type="radio" default="1" label="AUTO_PLAY_LABEL" description="AUTO_PLAY_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="pauseOnHover" type="radio" class="btn-group" default="1" label="Pause when Hover" description="Pause when Hover">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="keyboardNav" type="radio" class="btn-group" default="01" label="Keyboard Navigation" description="Keyboard Navigation">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="touchNav" type="radio" class="btn-group" default="1" label="Touch Navigation" description="Touch Navigation">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="startSlide" type="text" default="1" label="Start Slide" description="Set start slide." />
+				<field name="strips" type="text" default="20" label="Strips" description="Number strips for strip animations" />
+				<field name="blockCols" type="text" default="10" label="Block Cols" description="Number of block columns for block animations" />
+				<field name="blockRows" type="text" default="5" label="Block Rows" description="Number of block rows for block animations" />
+				<field name="animationSpeed" type="text" default="500" label="Animation Speed" description="Slide transition speed (by miniseconds)" />
+				<!-- <field name="interval" type="text" default="4000" label="INTERVAL_LABEL" description="INTERVAL_DESC" /> -->
+				<field name="nav_style" class="btn-group" type="radio" default="nav-style1" label="Navigation Style" description="Navigation Style">
+					<option value="nav-style1">Style1</option>
+					<option value="nav-style2">Style2</option>
+					<option value="nav-style3">Style3</option>
+				</field>
+				<field name="directionNav" class="btn-group" type="radio" default="1" label="Direction Navigation" description="Display direction navigation">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="controlNav" class="btn-group" type="radio" default="1" label="Control Navigation" description="Display control navigation">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="controlNavTooltip" class="btn-group" type="radio" default="1" label="Navigation Tooltip" description="Display Navigation Tooltip. For Navigation Style 1, 2">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="sjheading" label="Timer Options" />
+				<field name="timer_display" class="btn-group" type="radio" default="1" label="Display Timer" description="Display Timer">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>	
+				<field name="timer" class="btn-group" type="radio" default="360Bar" label="Timer" description="Timer style: Pie, 360Bar, Bar">
+					<option value="Pie">Pie</option>
+					<option value="360Bar">360Bar</option>
+					<option value="Bar">Bar</option>
+				</field>
+				<field name="timerPosition"  type="list" default="top-right" label="Timer Position" description="Timer Position">
+					<option value="top-left">Top-Left</option>
+					<option value="top-right">Top-Right</option>
+					<option value="bottom-left">Bottom-Left</option>
+					<option value="bottom-right">Bottom-Right</option>
+				</field>
+				<field name="timerBg"  type="color" default="#000000" label="Timer Background" description="Timer Background"/>
+				<field name="timerColor"  type="color" default="#00FF00" label="Timer Color" description="Timer Color"/>
+				<field name="timerOpacity"  type="text" default="0.5" label="Timer Opacity" description="Timer Opacity"/>
+				<field name="timerDiameter"  type="text" default="30" label="Timer Diameter" description="Timer Diameter"/>
+				<field name="timerPadding"  type="text" default="3" label="Timer Padding" description="Timer Padding"/>
+				<field name="timerStroke"  type="text" default="3" label="Timer Stroke" description="Timer Stroke"/>
+				<field name="timerBarStroke"  type="text" default="1" label="Timer Bar Stroke" description="Timer Bar Stroke"/>
+				<field name="timerBarStrokeColor"  type="color" default="#EEEEEE" label="Timer Bar Stroke Color" description="Timer Bar Stroke Color"/>
+				<field name="timerBarStrokeStyle"  type="text" default="solid" label="Timer Bar Stroke Style" description="Timer Bar Stroke Style"/>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="include_jquery" class="btn-group" type="radio" default="0"
+					label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					description="POST_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

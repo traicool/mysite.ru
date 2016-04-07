@@ -1,0 +1,30 @@
+.o_nas .items-leading, .o_nas .items-row .item{
+	padding: 10px 30px 15px 30px;
+}
+.o_nas .items-leading{
+	width: auto;
+	margin-bottom: 5px;
+}
+
+.o_nas .items-leading img, .o_nas .items-row	img{
+	max-width:100%;
+	height:auto;
+}
+
+
+.o_nas .items-row{
+	width:49.583333333333333333333333333333%;
+	max-width:1200px;
+	margin-right:10px;
+	float:left;
+}
+
+
+.o_nas .items-row.row-1{
+	margin-right:0px;
+}
+
+.o_nas .items-leading, .item{
+	background-color: gray;
+}
+

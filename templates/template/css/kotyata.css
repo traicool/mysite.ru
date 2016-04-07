@@ -1,0 +1,27 @@
+
+
+.kotyata .items-leading, .kotyata .items-row{
+	margin: 0 0 10px 0;
+	padding: 10px 32px 15px 32px;
+	font-size: 1.25em;
+}
+.kotyata .items-leading{
+	background-color: #c6db98;
+}
+.kotyata div.page-header h2{
+	background-color: rgba(50,50,50, .6);
+	font-size: 1.5625em;
+	color: white;
+	text-decoration:underline;
+}
+
+.kotyata .page-header {
+	
+	margin: -10px -32px 0 -32px ;	
+}
+
+.kotyata .page-header *{
+	border-style:none;
+  padding: 10px 0 10px 32px;
+}
+
